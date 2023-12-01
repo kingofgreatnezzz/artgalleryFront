@@ -1,16 +1,15 @@
-// pages/index.js
-import React from 'react';
-import Link from 'next/link';
+import Link from 'next/link'
+import React from 'react'
+import ArtworksPage from './ArtworkPage'
 
-const HomePage = () => {
+export default function page() {
   return (
-    <div>
-      <h1>Welcome to the Art Gallery</h1>
-      <Link href="/artworks">
-        <a>View Artworks</a>
+    <div> 
+      <H1> Welcome to Imperial Coronado ArtGallery.</H1>
+      <Link href='/artwork'>
+        See artwork details.
       </Link>
+    <ArtworksPage/>
     </div>
-  );
-};
-
-export default HomePage;
+  )
+}

@@ -1,6 +1,6 @@
 // components/UpdateArtwork.js
 import React, { useState, useEffect } from 'react';
-import { fetchArtwork, updateArtwork } from '../utils/utils'; // Create these functions in utils.js
+import { fetchArtworks, updateArtwork } from '@/utils/utils'; // Create these functions in utils.js
 
 function UpdateArtwork({ id }) {
   const [artwork, setArtwork] = useState(null);
@@ -13,7 +13,7 @@ function UpdateArtwork({ id }) {
 
   useEffect(() => {
     // Fetch the artwork details when the component mounts
-    fetchArtwork(id)
+    fetchArtworks(id)
       .then((data) => {
         setArtwork(data);
         setFormData(data); // Set the form data to the current artwork's details
